@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutura Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>NUTURA</h1>
+    <p>Shop natyral & bio</p>
+</header>
+
+<section class="products">
+    <div class="product">
+        <h3>Çaj Natyral</h3>
+        <p>Çmimi: 5€</p>
+        <button onclick="addToCart('Çaj Natyral', 5)">Bli</button>
+    </div>
+
+    <div class="product">
+        <h3>Mjaltë Bio</h3>
+        <p>Çmimi: 8€</p>
+        <button onclick="addToCart('Mjaltë Bio', 8)">Bli</button>
+    </div>
+</section>
+
+<section class="cart">
+    <h2>Shporta</h2>
+    <ul id="cart-list"></ul>
+    <p id="total">Totali: 0€</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f3;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2f6f4e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+button {
+    background: #2f6f4e;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #24553c;
+}
+
+.cart {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+let total = 0;
+
+function addToCart(name, price) {
+    const cartList = document.getElementById("cart-list");
+    const item = document.createElement("li");
+    item.textContent = name + " - " + price + "€";
+    cartList.appendChild(item);
+
+    total += price;
+    document.getElementById("total").textContent = "Totali: " + total + "€";
+}
