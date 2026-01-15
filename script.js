@@ -1,4 +1,4 @@
- let total = 0;
+let total = 0;
 
 function addToCart(name, price) {
     const cartList = document.getElementById("cart-list");
@@ -9,3 +9,4 @@ function addToCart(name, price) {
     total += price;
     document.getElementById("total").textContent = "Totali: " + total + "€";
 }
+
