@@ -1,4 +1,4 @@
-let total = 0;
+ let total = 0;
 
 function addToCart(name, price) {
     const cartList = document.getElementById("cart-list");
