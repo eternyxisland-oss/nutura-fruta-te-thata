@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,29 @@
 </head>
 <body>
 
-<header>
+<header class="header">
     <h1>NUTURA</h1>
-    <p>Shop natyral & bio</p>
-  <img src="druta-te-thata.jpg">
+    <p>Produkte natyrale & bio</p>
 </header>
 
-<section class="products">
+<main class="products">
+
     <div class="product">
+        <img src="https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f" alt="Çaj Natyral">
         <h3>Çaj Natyral</h3>
-        <p>Çmimi: 5€</p>
-        <button onclick="addToCart('Çaj Natyral', 5)">Bli</button>
+        <p>5€</p>
+        <button onclick="addToCart('Çaj Natyral', 5)">Shto në shportë</button>
     </div>
 
     <div class="product">
+        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784ba0" alt="Mjaltë Bio">
         <h3>Mjaltë Bio</h3>
-        <p>Çmimi: 8€</p>
-        <button onclick="addToCart('Mjaltë Bio', 8)">Bli</button>
+        <p>8€</p>
+        <button onclick="addToCart('Mjaltë Bio', 8)">Shto në shportë</button>
     </div>
-</section>
+
+</main>
 
 <section class="cart">
-    <h2>Shporta</h2>
-    <ul id="cart-list"></ul>
-    <p id="total">Totali: 0€</p>
-</section>
-
-<script src="script.js"></script>
-</body>
-</html>
+    <h2>🛒 Shporta</h2>
 
