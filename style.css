@@ -1,68 +1,87 @@
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7f6;
+    background: #f5f5f0;
+    color: #333;
 }
 
-.header {
-    background: #2f6f4e;
+header {
+    background: #556b2f;
     color: white;
     text-align: center;
     padding: 30px;
 }
 
 .products {
-    display: flex;
-    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    padding: 40px;
-    flex-wrap: wrap;
 }
 
 .product {
     background: white;
-    width: 250px;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    overflow: hidden;
-    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .product img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    border-radius: 10px;
 }
 
-.product h3 {
-    margin: 15px 0 5px;
-}
-
-.product p {
+.price {
+    color: #556b2f;
+    font-weight: bold;
     font-size: 18px;
-    margin: 0 0 15px;
 }
 
-.product button {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    border: none;
-    background: #2f6f4e;
+button {
+    background: #6b8e23;
     color: white;
-    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.product button:hover {
-    background: #24553c;
+button:hover {
+    background: #556b2f;
 }
 
-.cart {
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
     background: white;
+    padding: 30px;
+    margin: 10% auto;
     width: 300px;
-    margin: 0 auto 40px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
 }
 
