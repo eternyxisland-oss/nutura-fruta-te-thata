@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <title>Nutura Shop</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutura | Fruta të Thata</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
 </head>
+
 <body>
 
-<header class="header">
-    <h1>NUTURA</h1>
-    <p>Produkte natyrale & bio</p>
+<header>
+    <h1>Nutura</h1>
+    <p>Fruta të Thata Premium</p>
 </header>
 
-<main class="products">
+<section class="products">
+    <h2>Produktet</h2>
+    <div class="product-grid">
 
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f" alt="Çaj Natyral">
-        <h3>Çaj Natyral</h3>
-        <p>5€</p>
-        <button onclick="addToCart('Çaj Natyral', 5)">Shto në shportë</button>
+        <!-- PRODUKT MODEL -->
+        <div class="product">
+            <img src="images/produkt1.jpg" alt="Produkt">
+            <h3>Emri Produktit</h3>
+            <p class="price">€5.00</p>
+            <button onclick="openOrder('Emri Produktit', 5)">Porosit</button>
+        </div>
+
+        <!-- Kopjo këtë div 107 herë dhe ndrysho fotot / emrat -->
+
     </div>
+</section>
 
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784ba0" alt="Mjaltë Bio">
-        <h3>Mjaltë Bio</h3>
-        <p>8€</p>
-        <button onclick="addToCart('Mjaltë Bio', 8)">Shto në shportë</button>
+<!-- MODAL POROSI -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <h2 id="productName"></h2>
+        <input type="text" id="customerName" placeholder="Emri juaj">
+        <input type="email" id="customerEmail" placeholder="Email">
+        <button onclick="sendOrder()">Konfirmo Porosinë</button>
+        <button onclick="payWithCard()">Paguaj me Kartë</button>
     </div>
+</div>
 
-</main>
-
-<section class="cart">
-    <h2>🛒 Shporta</h2>
+<script src="script.js"></script>
+</body>
+</html>
 
